@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Basics Continue</title>
+    </head>
+    <body>
+        <h1>Continue JS Basics</h1>
+        <script>
+            // Conditional
+            let word = "internet";
+            if (word === "internet") {
+                console.log("The word is internet");
+            } else {
+                console.log(`The word is not internet, instead it is ${word}`);
+            }
+
+            let randomNumber = Math.random() * 200;
+            console.log(randomNumber);
+            if (randomNumber < 50) {
+                console.log("small");
+            } else if (randomNumber < 100) {
+                console.log("medium");
+            } else {
+                console.log("large");
+            }
+            /* While Loop */
+            // console.log("0");
+            // console.log("2");
+            // console.log("4");
+            // console.log("6");
+            // console.log("8");
+            // console.log("10");
+            let number = 0;
+            while (number < 12) {
+                // prints the number
+                console.log(number);
+                // updates the number;
+                number = number + 2;
+            }
+
+            //While loops Example 2
+            // Shows the value of 2 to the 10th power
+            // We need to variables - one to track the result and another one to count how often we have multiplied this result by 2
+            let result = 1;
+            let counter = 0;
+            while (counter < 10) {
+                result = result * 2;
+                counter = counter + 1;
+            }
+            console.log(result);
+
+            /* For Loops */
+
+            for (let number = 0; number <= 12; number = number + 2) {
+                console.log(number);
+            }
+
+            let anotherResult = 1;
+            for (let counter = 0; counter < 10; counter++) {
+                anotherResult = anotherResult * 2;
+            }
+            console.log(anotherResult);
+            // Updating variables
+            // let num = 1;
+            // num = num + 1;
+            // num += 1;
+            // num ++;
+
+            // fizz buzz
+            for (let i = 1; i <= 100; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    console.log("FizzBuzz");
+                } else if (i % 3 === 0) {
+                    console.log("fizz");
+                } else if (i % 5 === 0) {
+                    console.log("buzz");
+                } else {
+                    console.log(i);
+                }
+            }
+
+            // Making functions
+            function square(x) {
+                return x * x;
+            }
+            let sqResult = square(10);
+            console.log(`The result of the square funciton is ${sqResult}`);
+
+            // Another function
+            const power = function (base, exponent) {
+                // declare a variable that will be returned later
+                let result = 1;
+                for (let count = 0; count < exponent; count++) {
+                    result = result * base;
+                }
+                return result;
+            };
+
+            console.log(power(3, 10));
+
+            /* Scope */
+            let name = "Lydia";
+            let age = 21;
+
+            function getInfo() {
+                let name = "Zeyao";
+                let age = 24;
+                let city = "New York";
+                return `${name} is a funny person, and he is ${age}, and he lives in ${city}`;
+            }
+
+            console.log(getInfo());
+            console.log(`${name} is a funny person, and they are ${age}`);
+            // console.log(`${name} is a funny person, and they are ${age}, and they live in ${city}`);
+
+            function checkAge() {
+                if (age < 21) {
+                    const message = "You cannot drink!";
+                    return message;
+                } else {
+                    const message = "You can drink!";
+                    return message;
+                }
+            }
+        </script>
+    </body>
+</html>
